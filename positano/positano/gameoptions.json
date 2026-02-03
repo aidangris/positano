@@ -1,0 +1,58 @@
+{
+    "100": {
+        "name": "Goal Set",
+        "values": {
+            "1": {
+                "name": "Random",
+                "nobeginner": false
+            },
+            "2": {
+                "name": "Big in the Back: Grande, Gruppo, Dietro",
+                "nobeginner": false
+            },
+            "3": {
+                "name": "The Spice of Life: Altezza, Equilibrato, Bordo",
+                "nobeginner": false
+            },
+            "4": {
+                "name": "Tiny Homes: Piccolo, Solitario, Eccesso",
+                "nobeginner": false
+            },
+            "5": {
+                "name": "Balanced and Centered: Mezzo, Perfetto, Colonna",
+                "nobeginner": false
+            },
+            "6": {
+                "name": "Location, Location, Location (Hard): Solitario, Mezzo, Dietro",
+                "nobeginner": true
+            },
+            "7": {
+                "name": "More Blocks, More Problems (Hard): Grande, Altezza, Eccesso",
+                "nobeginner": true
+            }
+        },
+        "default": 1,
+        "displaycondition": [{
+            "type": "maxplayers",
+            "value": 1
+        }]
+    },
+    "102": {
+        "name": "Board Size",
+        "values": {
+            "1": {
+                "name": "4x4",
+                "nobeginner": false
+            },
+            "2": {
+                "name": "5x5",
+                "nobeginner": true
+            }
+        },
+        "default": 1,
+        "displaycondition": [{
+            "type": "minplayers",
+            "value": [1, 4]
+        }]
+    }
+}

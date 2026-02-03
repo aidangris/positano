@@ -1,0 +1,829 @@
+/**
+ *------
+ * BGA framework: Gregory Isabelli & Emmanuel Colin & BoardGameArena
+ * Positano implementation : © <Your name here> <Your email address here>
+ *
+ * This code has been produced on the BGA studio platform for use on http://boardgamearena.com.
+ * See http://en.boardgamearena.com/#!doc/Studio for more information.
+ * -----
+ *
+ * positano.css
+ *
+ * Positano stylesheet
+ *
+ */
+
+
+/*
+    This is the CSS stylesheet of your game User Interface.
+    
+    Styles defined on this file will be applied to the HTML elements you define in your
+    HTML template (positano_positano.tpl), and to HTML elements you create dynamically
+    (in positano.js).
+    
+    Usually, you are using CSS to:
+    
+    1°) define the overall layout of your game
+        (ex: place the board on the top left, place player's hand beside, place the deck on the right, ...).
+
+    2°) create your CSS-sprites:
+        All images of your games should be gathered into a small number of image files. Then, using
+        background-image and background-position CSS properties, you create HTML blocks that can 
+        display these images correctly (see example below).
+    
+    3°) ... anything else:
+        It is really easy to add and remove CSS classes dynamically from your Javascript with
+        dojo.addClass and dojo.removeClass. It is also easy to check if an element has a class
+        (dojo.hasClass) or to get all elements with a specific class (dojo.query). This is why,
+        very often, using CSS classes for the logic of your user interface allow you to do complex
+        thing easily.
+        
+        
+     Note: on the production platform, this file will be compressed and comments will be removed.
+           Consequently, don't hesitate to put as many comments as necessary.
+*/
+
+
+/* Note: you must not use any @import directive */
+
+
+/********* You can start writing your CSS below this line: **********/
+
+#entire-board-container {
+    transform: translate(0, -200px);
+}
+
+
+/*#board {
+    width: 701px;
+    height: 525px;
+    position: relative;
+    display: inline;
+    background-image: url('img/4x4 Cliffside/Row4.png'), url('img/4x4 Cliffside/Row3.png'), url('img/4x4 Cliffside/Row2.png'), url('img/4x4 Cliffside/Row1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top, 0% 33%, 0% 66.5%, bottom;
+}
+
+#big-board {
+    width: 701px;
+    height: 620px;
+    position: relative;
+    display: inline;
+    background-image: url('img/5x5 Cliffside/Row5.png'), url('img/5x5 Cliffside/Row4.png'), url('img/5x5 Cliffside/Row3.png'), url('img/5x5 Cliffside/Row2.png'), url('img/5x5 Cliffside/Row1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top, 0% 25%, 0% 50%, 0% 75%, bottom;
+}*/
+
+#front-view {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    display: inline-block;
+    /*border: 5px solid gray;*/
+    background-image: url('img/cliffside4x4_1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 0;
+    /*transform: translate(0, -200px);*/
+}
+
+#front-view-big-board {
+    width: 995px;
+    height: 900px;
+    position: absolute;
+    display: inline;
+    /*border: 5px solid gray;*/
+    background-image: url('img/cliffside5x5_3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 0;
+}
+
+#game-board-container {
+    width: 800px;
+    height: 800px;
+    position: relative;
+}
+
+#big-game-board-container {
+    width: 1000px;
+    height: 900px;
+    position: relative;
+}
+
+#beach-board {
+    width: 701px;
+    height: 502px;
+    background-image: url('img/BidBoard_optimized.png');
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline;
+    float: left;
+    /*display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;*/
+}
+
+#big-beach-board {
+    width: 1050px;
+    height: 502px;
+    background-image: url('img/BidBoard_optimized.png'), url('img/BidBoardExtension_optimized.png');
+    position: relative;
+    /*display: inline;*/
+    background-repeat: no-repeat;
+    background-position: left, right;
+}
+
+#lots {
+    height: 100px;
+}
+
+#blocks {
+    height: 100px;
+}
+
+#quality {
+    height: 100px;
+}
+
+#lotbids {
+    top: 0px;
+}
+
+#blockbids {
+    top: 150px;
+}
+
+#qualitybids {
+    top: 320px;
+}
+
+#bid-display {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 200px;
+    height: 487px;
+    font-size: 50px;
+    padding-left: 50px;
+    padding-top: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /*background-color: antiquewhite;*/
+}
+
+#big-bid-display {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 150px;
+    height: 487px;
+    font-size: 50px;
+    padding-left: 20px;
+    padding-top: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /*background-color: antiquewhite;*/
+}
+
+#bid-order-title {
+    font-size: 15px;
+}
+
+#lot-tracker {
+    position: relative;
+    display: inline;
+    float: right;
+    width: 502px;
+    height: 200px;
+    font-size: larger;
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: antiquewhite;
+}
+
+#bid-board-container {
+    position: relative;
+    display: inline-block;
+}
+
+#big-bid-board-container {
+    /*width: 2000px;*/
+    position: relative;
+    display: flex;
+}
+
+#mid-board-container {
+    position: relative;
+    display: flex;
+    /*height: 500px;
+    width: 800px;*/
+}
+
+#game-board-container {
+    position: relative;
+    display: flex;
+}
+
+.lotclass {
+    height: 150px;
+    position: absolute;
+    margin-top: 12px;
+    margin-bottom: -2px;
+    margin-left: 17px;
+}
+
+.blockclass {
+    height: 150px;
+    position: absolute;
+    margin-top: 3px;
+    margin-bottom: -3px;
+    margin-left: 17px;
+}
+
+.qualityclass {
+    height: 150px;
+    position: absolute;
+    margin-top: -6px;
+    margin-bottom: 0px;
+    margin-left: 17px;
+}
+
+.bidformat {
+    position: absolute;
+    margin-top: 30px;
+    width: 200px;
+    height: 500px;
+    /*border: medium solid red;*/
+}
+
+.bigbidformat {
+    position: absolute;
+    margin-top: 30px;
+    width: 150px;
+    height: 500px;
+    /*border: medium solid red;*/
+}
+
+.bidstock {
+    text-align: left;
+    line-height: 20px;
+    padding-left: 10px;
+}
+
+.bigbidstock {
+    text-align: left;
+    line-height: 15px;
+    padding-left: 10px;
+}
+
+.singlebidstock {
+    text-align: left;
+    line-height: 40px;
+    padding-left: 10px;
+}
+
+.goalstock {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    margin-top: 15px;
+}
+
+.playertablecard {
+    display: flex;
+    position: bottom;
+    margin-top: 5px;
+    width: 72px;
+    height: 96px;
+}
+
+.lotcard {
+    display: inline-block;
+    position: relative;
+    /*margin-top: 25px;
+    margin-left: 25px;*/
+    width: 96px;
+    height: 96px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    /*border: medium solid purple;*/
+}
+
+.frontsquare {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    /*border: medium solid purple;*/
+}
+
+.building {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.addon {
+    position: absolute;
+    background-image: url('img/Add-on.png');
+    transform: scale(0.5);
+    height: 185px;
+    width: 73px;
+    top: 15px;
+    left: 170px;
+}
+
+.silverremodel {
+    position: absolute;
+    width: 312px;
+    height: 70px;
+    background-image: url('img/Roof_Labels.png');
+    background-position: 0 140px;
+    top: 40px;
+    right: 10px;
+    transform: scale(0.5);
+}
+
+.goldremodel {
+    position: absolute;
+    width: 312px;
+    height: 70px;
+    background-image: url('img/Roof_Labels.png');
+    background-position: 0 0;
+    top: 40px;
+    right: 10px;
+    transform: scale(0.5);
+}
+
+.bronzebuild {
+    position: relative;
+    width: 312px;
+    height: 70px;
+    background-image: url('img/Roof_Labels.png');
+    background-position: 0 70px;
+    top: -30px;
+    right: 130px;
+    transform: scale(0.2);
+}
+
+.silverbuild {
+    position: relative;
+    width: 312px;
+    height: 70px;
+    background-image: url('img/Roof_Labels.png');
+    background-position: 0 140px;
+    top: -30px;
+    right: 130px;
+    transform: scale(0.2);
+}
+
+.goldbuild {
+    position: relative;
+    width: 312px;
+    height: 70px;
+    background-image: url('img/Roof_Labels.png');
+    background-position: 0 0;
+    top: -30px;
+    right: 130px;
+    transform: scale(0.2);
+}
+
+.buildcontainer {
+    position: relative;
+    max-width: 60px;
+    max-height: 10px;
+    object-fit: contain;
+    display: inline-block;
+}
+
+.smallbuildcontainer {
+    position: relative;
+    max-width: 50px;
+    max-height: 10px;
+    object-fit: contain;
+    display: inline-block;
+}
+
+.gelato {
+    background-image: url('img/Gelato.png');
+    width: 10.5px;
+    height: 15px;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    padding-right: 2px;
+    padding-left: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+.marker {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: white;
+    border: medium dashed red;
+    opacity: 0.3;
+    z-index: 10;
+    right: -2px;
+    bottom: -2px;
+}
+
+.lotmarker {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: gray;
+    opacity: 0.5;
+}
+
+.possiblelotmarker {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: white;
+    opacity: 0.35;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+.removedlot {
+    position: absolute;
+    height: 44px;
+    width: 170px;
+    top: 20px;
+    right: -33px;
+    background-image: url('img/Unused_Lot.png');
+    z-index: 1;
+    opacity: 0.8;
+}
+
+
+/*.possiblelotmarker:hover {
+    cursor: default;
+}*/
+
+.otto-avatar {
+    background-image: url('img/star.png');
+}
+
+.score-sheet-background {
+    width: 500px;
+    height: 500px;
+}
+
+
+/*front view classes*/
+
+.blueblock {
+    background-image: url('img/Blocks_4.png');
+    width: 290.333px;
+    height: 188.5px;
+    background-position: 580.666px 188.5px;
+    /*2,2*/
+}
+
+.greenblock {
+    background-image: url('img/Blocks_4.png');
+    width: 290.333px;
+    height: 185px;
+    background-position: 0 0;
+    /*1,1*/
+}
+
+.redblock {
+    background-image: url('img/Blocks_4.png');
+    width: 290.333px;
+    height: 188.5px;
+    background-position: 290.333px 0;
+    /*3,1*/
+}
+
+.yellowblock {
+    background-image: url('img/Blocks_4.png');
+    width: 290.333px;
+    height: 188.5px;
+    background-position: 0 188.5px;
+    /*1,2*/
+}
+
+.orangeblock {
+    background-image: url('img/Blocks_4.png');
+    width: 290.333px;
+    height: 188.5px;
+    background-position: 290.333px 188.5px;
+    /*3,2*/
+}
+
+.purpleblock {
+    background-image: url('img/Blocks_4.png');
+    width: 290.333px;
+    height: 188.5px;
+    background-position: 580.6663px 0;
+    /*2,1*/
+}
+
+.copper_roof {
+    background-image: url('img/Roofs_new_2.png');
+    width: 320px;
+    height: 113px;
+    background-position: 0 0;
+}
+
+.silver_roof {
+    background-image: url('img/Roofs_new_2.png');
+    width: 320px;
+    height: 113px;
+    background-position: 640px 0;
+}
+
+.gold_roof {
+    background-image: url('img/Roofs_new_2.png');
+    width: 320px;
+    height: 113px;
+    background-position: 320px 0;
+}
+
+.frontviewblock {
+    position: absolute;
+    z-index: 1;
+    transform: scale(0.45);
+    bottom: -60px;
+    left: -100px;
+}
+
+.frontviewroof {
+    position: absolute;
+    z-index: 2;
+    transform: scale(0.9);
+    bottom: 130px;
+    left: -19px;
+}
+
+
+/*.sky {
+    background-image: url('img/sky.jpg');
+    background-size: cover;
+    width: 550px;
+    height: 270px;
+}
+
+.bigsky {
+    background-image: url('img/sky.jpg');
+    background-size: cover;
+    width: 550px;
+    height: 325px;
+}*/
+
+.bluearrow {
+    background-image: url('img/Arrows_new.png');
+    width: 210px;
+    height: 270px;
+    background-position: 0 270px;
+}
+
+.greenarrow {
+    background-image: url('img/Arrows_new.png');
+    width: 210px;
+    height: 270px;
+    background-position: 0 0;
+}
+
+.redarrow {
+    background-image: url('img/Arrows_new.png');
+    width: 210px;
+    height: 270px;
+    background-position: 420px 0;
+}
+
+.yellowarrow {
+    background-image: url('img/Arrows_new.png');
+    width: 210px;
+    height: 270px;
+    background-position: 210px 0;
+}
+
+.orangearrow {
+    background-image: url('img/Arrows_new.png');
+    width: 210px;
+    height: 270px;
+    background-position: 630px 270px;
+}
+
+.purplearrow {
+    background-image: url('img/Arrows_new.png');
+    width: 210px;
+    height: 270px;
+    background-position: 630px 0;
+}
+
+.whitearrow {
+    background-image: url('img/Arrows_new.png');
+    width: 210px;
+    height: 270px;
+    background-position: 420px 270px;
+}
+
+.arrow {
+    /*background-color: aqua;   use for arrow clip-path*/
+    position: absolute;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    right: -50px;
+    bottom: -50px;
+    box-sizing: border-box;
+    padding-top: 30%;
+    padding-bottom: 0;
+    clip-path: polygon( 28% 2%, /* Top-left of rectangle */
+    72% 2%, /* Top-right of rectangle */
+    72% 55%, /* Right side before triangle */
+    95% 55%, /* Right point of arrow wings */
+    50% 100%, /* Bottom point of arrow */
+    5% 55%, /* Left point of arrow wings */
+    28% 55%/* Left side before triangle */
+    );
+}
+
+.frontarrow {
+    position: absolute;
+    z-index: 10;
+    opacity: 0.5;
+}
+
+
+/*top view classes*/
+
+
+/*.blue_block_top {
+    background-image: url('img/blue_block_top.png');
+    width: 160px;
+    height: 160px;
+    left: -30px;
+    bottom: -50px;
+}
+
+.green_block_top {
+    background-image: url('img/green_block_top.png');
+    width: 140px;
+    height: 140px;
+    left: -20px;
+    bottom: -15px;
+}
+
+.yellow_block_top {
+    background-image: url('img/yellow_block_top.png');
+    width: 160px;
+    height: 160px;
+    left: -35px;
+    bottom: -35px;
+}
+
+.red_block_top {
+    background-image: url('img/red_block_top.png');
+    width: 130px;
+    height: 130px;
+    left: -19px;
+    bottom: -23px
+}
+
+.orange_block_top {
+    background-image: url('img/orange_block_top.png');
+    width: 117px;
+    height: 117px;
+    left: -10px;
+    bottom: -10px;
+}
+
+.purple_block_top {
+    background-image: url('img/purple_block_top.png');
+    width: 117px;
+    height: 117px;
+    left: -10px;
+    bottom: -8px;
+}
+
+.block_top {
+    z-index: 1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.copper_roof_top {
+    background-image: url('img/copper_roof_top.png');
+    position: absolute;
+    left: -40px;
+    bottom: -25px;
+}
+
+.silver_roof_top {
+    background-image: url('img/silver_roof_top.png');
+    position: absolute;
+    left: -38px;
+    bottom: -25px;
+}
+
+.gold_roof_top {
+    background-image: url('img/gold_roof_top.png');
+    position: absolute;
+    left: -35px;
+    bottom: -15px;
+}
+
+.roof_top {
+    z-index: 2;
+    width: 170px;
+    height: 170px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.star {
+    background-image: url('img/star_border.png');
+    position: absolute;
+    left: 50px;
+    top: 70px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 5;
+}*/
+
+.buildingstar {
+    background-image: url('img/Star.png');
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 60px;
+    left: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /*z-index: 10;*/
+}
+
+.height_marker {
+    background-image: url('img/height_marker.JPG');
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    width: 15px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 5;
+}
+
+.height_num {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 40px;
+    top: 45px;
+    font-size: 20px;
+    z-index: 5;
+}
+
+.point_num {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 75px;
+    top: 70px;
+    font-size: large;
+    z-index: 5;
+}
+
+.rounded_corners {
+    border-radius: 10px;
+}
+
+
+/*
+    Example of CSS sprites (a black token and a white token, 20x20px each, embedded in the same "tokens.png" 40x20px image):
+
+    .white_token {
+        background-image: url('img/tokens.png');
+        background-position: 0px 0px;
+    }
+    .black_token {
+        background-image: url('img/tokens.png');
+        background-position: -20px 0px;
+    }
+    .token {
+        width: 20px;
+        height: 20px;
+        background-repeat: none;
+    }
+*/

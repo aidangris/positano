@@ -1,0 +1,26 @@
+{
+    "table": {
+        "turns_number": {
+            "id": 13,
+            "name": "Number of turns",
+            "type": "int"
+        }
+    },
+    "player": {
+        "building_points": {
+            "id": 10,
+            "name": "Building Points",
+            "type": "int"
+        },
+        "gelato_points": {
+            "id": 11,
+            "name": "Gelato Points",
+            "type": "int"
+        },
+        "goal_points": {
+            "id": 12,
+            "name": "Goal Points",
+            "type": "int"
+        }
+    }
+}
